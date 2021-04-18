@@ -1,0 +1,32 @@
+'''Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+Clarification:
+
+Confused why the returned value is an integer but your answer is an array?
+
+Note that the input array is passed in by reference, which means a modification to the input array will be known to the caller as well.
+
+
+Source: https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array
+
+'''
+
+#Code in C
+
+int removeDuplicates(int* nums, int numsSize)
+{
+    if(numsSize == 0)
+        return 0;
+    int fast = 1; int slow = 1;
+    while(fast < numsSize)
+    {
+        if(nums[fast] != nums[fast - 1])
+        {
+            nums[slow] = nums[fast];
+            ++slow;
+        }
+    ++fast;    
+    }
+}
