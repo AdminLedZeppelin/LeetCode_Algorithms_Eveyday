@@ -30,3 +30,29 @@ int removeDuplicates(int* nums, int numsSize)
     ++fast;    
     }
 }
+
+
+#Code in C++
+
+Class Solution{
+public:
+    int removeDuplicates(vactor<int>& nums)
+    {
+        int n = numsSize();
+        if(n == 0)
+        {
+            return 0;
+        }
+    int fast = 1; int slow = 1;
+    while(fast < numsSize)
+    {
+        if(nums[fast] != nums[fast - 1])
+        {
+            nums[slow]  = nums[fast];
+            ++slow;
+        }
+    ++fast;
+    }
+    }
+
+};
